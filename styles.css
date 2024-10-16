@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-container {
+  position: relative;
+  width: 80%;
+  padding-top: 40%; /* The height will be 40% of the width */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.map-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Scale the image to cover the container */
+  border-radius: 10px;
+}
+
+.map-markers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* .map-markers .marker {
+    position: absolute;
+    width: 20px; 
+    height: 20px; 
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+} */
+
+.map-markers .marker {
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  background-image: url("pin.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transform: translate(-50%, -100%); /* Center the pin at its pointed tip */
+}
+
+.popup {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: none; /* Hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+.game-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Space between map and card area */
+}
+
+h1 {
+  font-size: 24px;
+  width: 80%;
+  text-align: center;
+}
+
+h3,
+h4 {
+  width: 80%;
+  text-align: center;
+  line-height: 1.4em;
+  margin: 10px 0px;
+}
+
+/* CSS for rows */
+#neurotoxicants-row,
+#sources-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 20px;
+  color: green;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+  /* .card-grid {
+        
+    } */
+
+  .map-markers .marker {
+    width: 10px; /* Smaller size on smaller screens */
+    height: 10px; /* Smaller size on smaller screens */
+  }
+}
+
+/* styling for cards */
+.card {
+  position: relative;
+  width: 140px;
+  height: 100px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 5px;
+}
+
+.card-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-name {
+  font-size: 16px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  color: white;
+  padding: 2px;
+  background-color: #0000007a;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 204, 0, 0.423);
+  display: block;
+  transition: opacity 0.3s ease;
+}

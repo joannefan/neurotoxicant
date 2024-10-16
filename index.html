@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neurotoxicant Matching Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>
+        Match each neurotoxicant to a source of exposure in the environment for
+        a child/mother.
+      </h1>
+      <h3>
+        Click on a card from each row to try a match. A correctly matched pair
+        is highlighted green.
+      </h3>
+      <h3>
+        For hints, hover over pins on the map to learn about case studies
+        described in
+        <em>Environmental Neurotoxicants and Developing Brain</em> (Miodovnik
+        2011). The background pictures for the neurotoxicant cards are grouped by the broad category they belong to: HEAVY METALS, INDUSTRIAL CHEMICALS & PESTICIDES, and ENDOCRINE DISRUPTORS.
+      </h3>
+      <h4>
+        Note that the case studies and the source cards are not meant to provide
+        exhaustive lists; only a subset of case studies (not to mention other
+        kinds of research) and possible environments sources are represented.
+        Likewise, the 8 "neurotoxicants" below are more well-known candidates
+        for negatively impacting brain development early in life and for
+        associations with neurological, cognitive, or behavioral issues. But as
+        Miodovnik writes,
+        <em
+          >"Only about 200 chemicals out of more than 80,000 registered with the
+          United States Environmental Protection Agency have undergone extensive
+          neurotoxicity testing, and many chemicals found in consumer goods are
+          not required to undergo any neurodevelopmental testing.</em
+        >
+      </h4>
+      <div class="map-container">
+        <img src="worldmap.jpeg" alt="World Map" class="map-background" />
+        <div class="map-markers">
+          <div
+            class="marker"
+            data-info="Lead case study!"
+            style="top: 20%; left: 30%"
+          ></div>
+          <div
+            class="marker"
+            data-info="Mercury case study!"
+            style="top: 40%; left: 50%"
+          ></div>
+        </div>
+      </div>
+      <div id="popup" class="popup"></div>
+      <div class="game-area">
+        <div class="card-grid">
+          <div id="neurotoxicants-row"></div>
+          <div id="sources-row"></div>
+        </div>
+        <div class="message"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      const popup = document.getElementById("popup");
+      const markers = document.querySelectorAll(".marker");
+
+      markers.forEach((marker) => {
+        marker.addEventListener("mouseover", (event) => {
+          const info = event.target.dataset.info;
+
+          // Set the popup content
+          popup.textContent = info;
+
+          // Position the popup near the marker
+          const rect = event.target.getBoundingClientRect();
+          popup.style.left = `${rect.left + window.scrollX}px`;
+          popup.style.top = `${rect.bottom + window.scrollY + 5}px`; // Position below the marker
+
+          // Show the popup
+          popup.style.display = "block";
+        });
+
+        marker.addEventListener("mouseout", () => {
+          // Hide the popup
+          popup.style.display = "none";
+        });
+      });
+    </script>
+  </body>
+</html>
