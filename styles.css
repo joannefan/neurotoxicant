@@ -36,15 +36,6 @@ body {
   left: 0;
 }
 
-/* .map-markers .marker {
-    position: absolute;
-    width: 20px; 
-    height: 20px; 
-    background-color: white;
-    border-radius: 50%;
-    cursor: pointer;
-} */
-
 .map-markers .marker {
   position: absolute;
   width: 30px;
@@ -57,7 +48,7 @@ body {
   transform: translate(-50%, -100%); /* Center the pin at its pointed tip */
 }
 
-.popup {
+#popup {
   position: absolute;
   background: white;
   border: 1px solid #ccc;
@@ -66,6 +57,7 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   display: none; /* Hidden by default */
   transition: opacity 0.3s ease;
+  max-width: 30%;
 }
 
 .game-area {
@@ -155,4 +147,22 @@ h4 {
   background: rgba(255, 204, 0, 0.423);
   display: block;
   transition: opacity 0.3s ease;
+}
+
+.credit {
+  padding: 10px;
+  font-size: 12px;
+  color: #333;
+}
+
+div[data-category="Heavy Metals"] {
+  background-color: #f4efd1;
+}
+
+div[data-category="Industrial Chemicals"] {
+  background-color: #f1dcf2;
+}
+
+div[data-category="Endocrine Disruptors"] {
+  background-color: #d8f2f5;
 }

@@ -8,51 +8,75 @@
   </head>
   <body>
     <div class="main-container">
-      <h1>
-        Match each neurotoxicant to a source of exposure in the environment for
-        a child/mother.
-      </h1>
-      <h3>
-        Click on a card from each row to try a match. A correctly matched pair
-        is highlighted green.
-      </h3>
-      <h3>
-        For hints, hover over pins on the map to learn about case studies
-        described in
-        <em>Environmental Neurotoxicants and Developing Brain</em> (Miodovnik
-        2011). The background pictures for the neurotoxicant cards are grouped by the broad category they belong to: HEAVY METALS, INDUSTRIAL CHEMICALS & PESTICIDES, and ENDOCRINE DISRUPTORS.
-      </h3>
+      <h1>Can you match neurotoxicants to sources of exposure?</h1>
+      <h3>Instructions</h3>
       <h4>
-        Note that the case studies and the source cards are not meant to provide
-        exhaustive lists; only a subset of case studies (not to mention other
-        kinds of research) and possible environments sources are represented.
-        Likewise, the 8 "neurotoxicants" below are more well-known candidates
-        for negatively impacting brain development early in life and for
-        associations with neurological, cognitive, or behavioral issues. But as
-        Miodovnik writes,
+        Below the map, click on a card from each row to try a match between a
+        neurotoxicant and a possible or common source of exposure for chidren or
+        mothers. A correctly matched pair will be highlighted green. The
+        background colors of cards are grouped by the broad category they belong
+        to: HEAVY METALS (yellow), INDUSTRIAL CHEMICALS & PESTICIDES (pink), and
+        ENDOCRINE DISRUPTORS (blue).
+      </h4>
+      <h4>
+        To learn more about the various neurotoxicants, hover over pins on the
+        map for more context, including evidence from studies described in
+        <em>Environmental Neurotoxicants and Developing Brain</em> (Miodovnik
+        2011). The location of a pin is based on the country where one of the
+        mentioned studies took place.
+      </h4>
+      <h4>
+        Note that the evidence popups and the environmental sources cards are
+        not meant to provide exhaustive lists. Likewise, the 9 "neurotoxicants"
+        below are only more well-known candidates for negatively impacting brain
+        development early in life and for associations with neuropsychological,
+        cognitive, or behavioral issues. But, as Miodovnik writes,<br />
         <em
           >"Only about 200 chemicals out of more than 80,000 registered with the
           United States Environmental Protection Agency have undergone extensive
           neurotoxicity testing, and many chemicals found in consumer goods are
-          not required to undergo any neurodevelopmental testing.</em
+          not required to undergo any neurodevelopmental testing."</em
         >
       </h4>
       <div class="map-container">
-        <img src="worldmap.jpeg" alt="World Map" class="map-background" />
+        <img src="map.jpg" alt="World Map" class="map-background" />
         <div class="map-markers">
           <div
             class="marker"
-            data-info="Lead case study!"
-            style="top: 20%; left: 30%"
+            data-info="lead"
+            style="top: 65%; left: 89%"
           ></div>
           <div
             class="marker"
-            data-info="Mercury case study!"
-            style="top: 40%; left: 50%"
+            data-info="mercury"
+            style="top: 12%; left: 48.5%"
+          ></div>
+          <div
+            class="marker"
+            data-info="arsenic"
+            style="top: 28%; left: 86%"
+          ></div>
+          <div
+            class="marker"
+            data-info="manganese"
+            style="top: 36%; left: 74%"
+          ></div>
+          <div class="marker" data-info="pcb" style="top: 22%; left: 28%"></div>
+          <div class="marker" data-info="ops" style="top: 24%; left: 31%"></div>
+          <div
+            class="marker"
+            data-info="phthalates"
+            style="top: 28%; left: 83%"
+          ></div>
+          <div class="marker" data-info="bpa" style="top: 28%; left: 29%"></div>
+          <div
+            class="marker"
+            data-info="pbde"
+            style="top: 18%; left: 52%"
           ></div>
         </div>
       </div>
-      <div id="popup" class="popup"></div>
+      <div id="popup"></div>
       <div class="game-area">
         <div class="card-grid">
           <div id="neurotoxicants-row"></div>
@@ -60,30 +84,143 @@
         </div>
         <div class="message"></div>
       </div>
+      <div class="credit">
+        <h5>Resources</h5>
+        WORLD MAP IMAGE:
+        <em>
+          By
+          <a href="//commons.wikimedia.org/wiki/User:Strebe" title="User:Strebe"
+            >Strebe</a
+          >
+          - <span class="int-own-work" lang="en">Own work</span>,
+          <a
+            href="https://creativecommons.org/licenses/by-sa/3.0"
+            title="Creative Commons Attribution-Share Alike 3.0"
+            >CC BY-SA 3.0</a
+          >,
+          <a href="https://commons.wikimedia.org/w/index.php?curid=16115337"
+            >Link</a
+          >
+        </em>
+        <br /><br />
+        "Environmental Neurotoxicants and Developing Brain", link:
+        <a href="https://onlinelibrary.wiley.com/doi/10.1002/msj.20237"
+          >https://onlinelibrary.wiley.com/doi/10.1002/msj.20237</a
+        >
+        <br /><br />
+        The following studies are all cited in Miodovnik 2011, but I had to
+        reference some of the original sources for information about where the
+        studied cohorts were located:
+        <br /><br />
+        "Phthalates Exposure and Attention-Deficit/Hyperactivity Disorder in
+        School-Age Children", link:
+        <a href="https://doi.org/10.1016/j.biopsych.2009.07.034"
+          >https://doi.org/10.1016/j.biopsych.2009.07.034</a
+        >
+        <br />
+        "Relationship between Environmental Phthalate Exposure and the
+        Intelligence of School-Age Children", link:
+        <a href="https://ehp.niehs.nih.gov/doi/10.1289/ehp.0901376"
+          >https://ehp.niehs.nih.gov/doi/10.1289/ehp.0901376</a
+        >
+        <br />
+        "Prenatal Exposure to Organohalogens, Including Brominated Flame
+        Retardants, Influences Motor, Cognitive, and Behavioral Performance at
+        School Age", link:
+        <a href="https://ehp.niehs.nih.gov/doi/10.1289/ehp.0901015"
+          >https://ehp.niehs.nih.gov/doi/10.1289/ehp.0901015</a
+        >
+        <br />
+        "Prenatal bisphenol A exposure and early childhood behavior", link:
+        <a href="https://pubmed.ncbi.nlm.nih.gov/20049216/"
+          >https://pubmed.ncbi.nlm.nih.gov/20049216/</a
+        >
+      </div>
     </div>
     <script src="script.js"></script>
     <script>
       const popup = document.getElementById("popup");
       const markers = document.querySelectorAll(".marker");
 
+      const studyInfo = {
+        lead: `In 1892, many cases of lead poisoning in children were identified in Queensland, Australia 
+        due to lead-based paint chips from home railings and walls. 
+In the 1970s, two epidemiological studies in the U.S. found lead exposure to impair children's academic performance and neuropsychological scores. 
+With federal regulations which mandated the reduction of industrial lead emissions and leaded gasoline, 
+blood lead levels reduced by 80% over 1978 - 1991. 
+However, an estimated 250,000 U.S. children aged 1-5 years still have levels above 10 μg/dL. 
+There is no threshold of safe exposure for children.`,
+        mercury: `70% of mercury in the global fish supply comes from industrial emissions. 
+        Atmospheric mercury returns to the ground through precipitation, becomes methylated by bacteria into a toxic 
+        form of mercury called methylmercury (MeHg), and bioaccumulates in fish. 
+        Large epidemiological studies have linked prenatal MeHg exposure from fish consumption 
+        to adverse neurological outcomes in children. For example, in the Faroe Islands, children with higher 
+        cord-blood MeHg levels showed poorer attention, motor and visual-spatial skills, language, and memory. 
+        Not all studies have found consistent cognitive effects. 
+        Nevertheless, there appears to be no safe threshold of MeHg exposure. 
+        In adults, the damage seems more localized, 
+        whereas in the developing brain, its effects are more widespread as it disrupts neuronal migration.`,
+        arsenic: `In a 1955 incident in Japan, over 12,000 infants consumed arsenic-contaminated milk powder. 
+        Subsequently, lower IQs and higher rates of mental retardation were found in survivors, 
+        though exposure levels were not reported. In the U.S., one study linked arsenic exposure to a decline 
+        in memory in children living near a waste site. 
+        Several other studies also found small impairments in memory, attention, and intelligence 
+        in children exposed to high levels of arsenic in drinking water. 
+        However, studies vary in how they measured exposure and cognitive outcomes and 
+        whether they isolated arsenic's effects from other co-contaminants.`,
+        manganese: `Manganese is used in many industries like steel production, welding, and gasoline. 
+        Exposure can also happen with contaminated water and manganese-based fungicides. 
+        A study with primates found that blood manganese levels affected cognition and increased compulsive behaviors. 
+        Human studies of children based in the U.S., Mexico, Canada, China, and Bangladesh have 
+        linked higher levels of exposure to attention deficits, memory issues, hyperactivity, and/or lower IQ scores. 
+        However, studies may differ in biomarkers used and control of interaction effects.`,
+        pcb: `Polychlorinated Biphenyl Compounds (PCBs) were banned in the 1970s, but due to their high chemical stability, 
+        remain prevalent in many products manufactured before 1979, such as electrical equipment, 
+        caulking, and certain plastics, and are commonly found in landfills. 
+        Over 10 longitudinal studies have linked prenatal exposure to PCBs from consuming contaminated fish 
+        with modest negative outcomes in attention, memory, learning, IQ, and/or risk of ADHD. 
+        For example, Stewart et al. (2008) found that 9-year-old boys who had been exposed to PCBs in the womb 
+        had a 3-point drop in IQ per 1-ng/g increase in placental PCB.`,
+        ops: `Organophosphate pesticides (OPs), when broken down in the body, inhibit an important enzyme called acetylcholinesterase. 
+        An OP called Chlorpyrifos was banned from residential use in 2000 due to animal studies indicating its neurotoxicity. Epidemiological studies in New York City also linked prenatal exposure to chlorpyrifos, 
+        which had been used in homes to control cockroach infestations, to developmental and behavioral issues in children. 
+        However, chlorpyrifos and another OP called diazinon are still widely used in agriculture, 
+        increasing risk for children near farm areas. 
+        Unfortunately, animal studies suggest that newer replacements for banned OPs 
+        may not be much better in terms of neurotoxic effects.`,
+        phthalates: `Phthalates are plasticizers found in products like IV bags, food packaging, toys, and personal care items. 
+        Prospective cohort studies indicate that prenatal exposure to phthalates may be linked to disruptive behavior 
+        in children aged 5 to 9 and social impairments in adolescents, among other effects. 
+        Kim et al. (2009, 2010) found associations with ADHD and poorer IQ scores in school-age children in South Korea.`,
+        bpa: `Bisphenol A (BPA) is used in products like polycarbonate plastic bottles and epoxy resins 
+        for canned goods. While concerns about its estrogen-like effects on reproduction are more well-known,  
+        not as much focus has been on its effects on neurobehavioral functioning. However, animal studies have found BPA to alter brain development, 
+        cognitive function, and hyperactivity in rodents. One human study linked prenatal BPA exposure 
+        to increased aggression and hyperactivity, particularly in female toddlers.`,
+        pbde: `Polybrominated diphenyl ethers (PBDEs) are flame retardants found in products 
+        like electronics, textiles, and furniture. Research suggests that prenatal exposure to PBDEs 
+        is associated with behavioral changes, hyperactivity, impaired learning and memory, and neuronal death in mice or rats. 
+        Interestingly, Roze et al. (2009) found both positive and negative outcomes 
+        of prenatal PBDE exposure in their study with a group of 5-6 year old children in the Netherlands; 
+        fine-motor skills and attention were poorer, but coordination, visual perception, and behavior scores were better.`,
+      };
+
       markers.forEach((marker) => {
         marker.addEventListener("mouseover", (event) => {
           const info = event.target.dataset.info;
 
           // Set the popup content
-          popup.textContent = info;
+          popup.textContent = studyInfo[info];
 
           // Position the popup near the marker
           const rect = event.target.getBoundingClientRect();
-          popup.style.left = `${rect.left + window.scrollX}px`;
+          popup.style.left = `${rect.left + window.scrollX - 150}px`;
           popup.style.top = `${rect.bottom + window.scrollY + 5}px`; // Position below the marker
 
-          // Show the popup
           popup.style.display = "block";
         });
 
         marker.addEventListener("mouseout", () => {
-          // Hide the popup
           popup.style.display = "none";
         });
       });

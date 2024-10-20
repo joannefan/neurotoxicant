@@ -1,8 +1,13 @@
-// Game data
 const neurotoxicants = [
   { name: "Lead", category: "Heavy Metals", image: "metals.jpeg", partner: "" },
   {
     name: "Mercury",
+    category: "Heavy Metals",
+    image: "metals.jpeg",
+    partner: "",
+  },
+  {
+    name: "Arsenic",
     category: "Heavy Metals",
     image: "metals.jpeg",
     partner: "",
@@ -47,10 +52,16 @@ const neurotoxicants = [
 
 const sources = [
   {
-    name: "Paint in older homes, contaminated drinking water",
+    name: "Paint in older homes, contaminated water",
     image: "",
     category: "Heavy Metals",
     partner: "Lead",
+  },
+  {
+    name: "Contaminated water and food (e.g., milk powder), industrial sites",
+    image: "",
+    category: "Heavy Metals",
+    partner: "Arsenic",
   },
   {
     name: "Contaminated fish and shellfish",
@@ -59,37 +70,37 @@ const sources = [
     partner: "Mercury",
   },
   {
-    name: "Contaminated drinking water",
+    name: "Contaminated water, steel and welding industrial sites",
     image: "",
     category: "Heavy Metals",
     partner: "Manganese",
   },
   {
-    name: "Contaminated food, environments with old electrical equipment",
+    name: "Old electrical equipment, landfills, contaminated food",
     image: "",
     category: "Industrial Chemicals",
     partner: "Polychlorinated Biphenyl Compounds",
   },
   {
-    name: "Residues on fruits and vegetables, living near agriculture",
+    name: "Contaminated fruits and vegetables, agricultural runoff",
     image: "",
     category: "Industrial Chemicals",
     partner: "Organophosphate Pesticides",
   },
   {
-    name: "Household dust, plastic toys, food packaging, personal care products",
+    name: "Toys, food packaging, personal care products",
     image: "",
     category: "Endocrine Disruptors",
     partner: "Phthalates",
   },
   {
-    name: "Plastic containers, lining inside canned food and baby formulas",
+    name: "Plastic bottles, food cans",
     image: "",
     category: "Endocrine Disruptors",
     partner: "Bisphenol A",
   },
   {
-    name: "Household dust, furniture/electronics upholstered with flame retardants",
+    name: "Flame retardants in furniture and electronics",
     image: "",
     category: "Endocrine Disruptors",
     partner: "Polybrominated Diphenyl Ethers",
@@ -142,29 +153,17 @@ function createCardElements() {
     cardElement.dataset.category = card.category;
     cardElement.dataset.partner = card.partner;
 
-    // Create the image element if it exists
-    if (card.image) {
-      const imgElement = document.createElement("img");
-      imgElement.src = card.image;
-      imgElement.alt = "";
-      imgElement.classList.add("card-image");
-      cardElement.appendChild(imgElement);
-    }
-
     // Create a span for the card name
     const nameElement = document.createElement("span");
     nameElement.classList.add("card-name");
     nameElement.textContent = card.name;
+    nameElement.style.backgroundColor = "transparent";
+    nameElement.style.color = "black";
 
-    if (card.image === "") {
-      nameElement.style.backgroundColor = "transparent";
-      nameElement.style.color = "black";
-    }
     cardElement.appendChild(nameElement);
 
     cardElement.addEventListener("click", flipCard);
 
-    // Append card to the respective row based on category
     if (card.image !== "") {
       neurotoxicantsRow.appendChild(cardElement); // All neurotoxicants
     } else {
